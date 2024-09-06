@@ -1,9 +1,7 @@
 import { FC, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState } from 'react';
 import styles from './Home.module.css';
- 
 // https://mui.com/material-ui/react-app-bar/
 import MenuIcon from '@mui/icons-material/Menu';
- 
 import { PostData } from './Models/postdata';
  
 import {
@@ -16,15 +14,15 @@ import {
     Button,
     Stack,
     colors
-  } from "@mui/material";
+} from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import { AccountCircle, Square } from '@mui/icons-material';
 import { deepOrange } from '@mui/material/colors';
 import Layout from './MenuLayout/Layout';
 import axios from 'axios';
 // https://mui.com/material-ui/react-app-bar/
- 
- 
+
+
 interface HomeProps {}
  
 // const Home = ()  => {
@@ -175,7 +173,6 @@ const Home: FC<HomeProps> = () => {
                     <Button color="inherit" variant="contained" className={styles.MarginLeftAuto} onClick={callEndpoint}>Using AXIOS</Button>
                    
                     {hasPost && (
-                       
                         <div>
                             {/* https://saurabhnativeblog.medium.com/rendering-a-table-in-react-from-a-json-array-using-object-keys-and-object-values-062046973780 */}
                             {/* {posts.map(post => (
@@ -183,7 +180,6 @@ const Home: FC<HomeProps> = () => {
                                     <span>{post.body}</span>
                                 </div>
                             ))} */}
-                       
                        <table>
                             <thead>
                                 <tr>
@@ -207,15 +203,13 @@ const Home: FC<HomeProps> = () => {
                                 ))}
                             </tbody>
                         </table>
- 
-                        </div>
-                       
+                        </div> 
                     )}
                     </>
                 )}
-                </>
+            </>
         </Layout>
-      );
+    );
 }
  
 export default Home;
